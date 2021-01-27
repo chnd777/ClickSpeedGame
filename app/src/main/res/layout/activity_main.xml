@@ -39,6 +39,19 @@
         android:layout_centerInParent="true"
         android:text="Play" />
 
+    <TextView
+        android:id="@+id/timeOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginBottom="98dp"
+        android:text=""
+        android:textColor="#1CE393"
+        android:textSize="120px"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

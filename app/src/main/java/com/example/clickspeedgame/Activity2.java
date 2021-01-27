@@ -58,6 +58,6 @@ public class Activity2 extends AppCompatActivity {
     public void onBackPressed() {
         startActivity(new Intent(Activity2.this, MainActivity.class));
         finish();
-        //moveTaskToBack(false);
+        moveTaskToBack(false);
     }
 }

@@ -2,19 +2,25 @@ package com.example.clickspeedgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static android.view.View.*;
 
+
 public class MainActivity extends AppCompatActivity {
     RelativeLayout field;
-    TextView score,time;
+    TextView score,time,timeOver;
     Button play;
     public static int count =0;
     public int counter=0;
@@ -26,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         field=findViewById(R.id.field);
         score=findViewById(R.id.score);
         time=findViewById(R.id.time);
+        timeOver=findViewById(R.id.timeOver);
         score.setText("0");
         time.setText("10 seconds");
         field.setEnabled(false);
@@ -43,12 +50,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void onClickBack(){
+        
+    }
     public void play(){
         play.setVisibility(View.GONE);
         count=0;
         field.setEnabled(true);
         startTime();
-
     }
     public void startTime(){
         new CountDownTimer(10000,1000) {
@@ -59,14 +68,17 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFinish() {
+                timeOver.setText("TimeOver!");
                 field.setEnabled(false);
                 Intent intent=new Intent(MainActivity.this, Activity2.class);
                 intent.putExtra("score", count);
                 startActivity(intent);
+                counter=0;
             }
         }.start();
     }
     public static int getValue(){
         return count;
     }
+
 }
