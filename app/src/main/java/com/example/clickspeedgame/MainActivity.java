@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTick(long millisUntilFinished) {
                 counter++;
-                time.setText(""+(10-counter));
+                time.setText(""+(10-counter)+" sec");
             }
             @Override
             public void onFinish() {

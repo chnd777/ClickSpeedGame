@@ -15,35 +15,49 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="167dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="124dp"
         android:text="score:"
         android:textColor="@color/purple_700"
-        android:textSize="120px"
+        android:textSize="100px"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/playagain"
-        android:layout_width="155dp"
-        android:layout_height="59dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="121dp"
-        android:text="play again" />
 
     <TextView
         android:id="@+id/best"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/playagain"
+        android:layout_below="@+id/pscore"
         android:layout_alignParentStart="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="39dp"
-        android:text="Best:"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="53dp"
+        android:text="High score:"
         android:textColor="@color/purple_700"
-        android:textSize="100px"
+        android:textSize="80px"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="227dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/best"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="53dp"
+        android:text="Reset high score" />
+
+    <Button
+        android:id="@+id/playagain"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="37dp"
+        android:text="play again" />
+
 
 
 </RelativeLayout>
