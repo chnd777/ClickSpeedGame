@@ -2,20 +2,16 @@ package com.example.clickspeedgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Handler;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import static android.view.View.*;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,9 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void onClickBack(){
-        
-    }
+
     public void play(){
         play.setVisibility(View.GONE);
         count=0;
